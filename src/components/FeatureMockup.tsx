@@ -2,14 +2,10 @@ import type { Feature } from '../data/content'
 import LazyImage from './LazyImage'
 import { membershipFeatures, profileSkills } from '../data/content'
 
-/* ---------- shaBlue coded overlay pieces ---------- */
-
-/** Blue status dot clipping the top-left corner of a mockup card. */
 function BlueDot({ className = '' }: { className?: string }) {
   return <span className={`absolute h-[22px] w-[22px] rounded-full bg-check-gradient ${className}`} aria-hidden />
 }
 
-/** RR brand badge — white/cyan mark on the cyan→navy gradient disc. */
 function Badge({ className = '' }: { className?: string }) {
   return (
     <span
@@ -21,7 +17,6 @@ function Badge({ className = '' }: { className?: string }) {
   )
 }
 
-/** Gru avatar inside an amber ring (used on the floating "person" chips). */
 function Avatar({ size = 52 }: { size?: number }) {
   return (
     <span
@@ -40,7 +35,6 @@ function Avatar({ size = 52 }: { size?: number }) {
   )
 }
 
-/** Floating white chip with avatar + role/name, overlapping a mockup edge. */
 function PersonChip({
   role,
   name,
@@ -67,7 +61,6 @@ function PersonChip({
   )
 }
 
-/** Cyan→navy gradient check used inside the membership feature list. */
 function GradientCheck() {
   return (
     <span className="grid h-4 w-4 shrink-0 place-items-center rounded-full bg-check-gradient">
@@ -77,8 +70,6 @@ function GradientCheck() {
     </span>
   )
 }
-
-/* ---------- Feature 1 — global job board ---------- */
 
 function JobBoardMockup() {
   return (
@@ -108,8 +99,6 @@ function JobBoardMockup() {
     </div>
   )
 }
-
-/* ---------- Feature 2 — membership tier card (fully coded) ---------- */
 
 function MembershipMockup() {
   return (
@@ -145,8 +134,6 @@ function MembershipMockup() {
   )
 }
 
-/* ---------- Feature 3 — candidate profile ---------- */
-
 function PlayButton({ className = '' }: { className?: string }) {
   return (
     <span className={`grid place-items-center rounded-full bg-cyan shadow-float ${className}`} aria-hidden>
@@ -163,7 +150,7 @@ function PlayButton({ className = '' }: { className?: string }) {
 function ProfileMockup() {
   return (
     <div className="relative w-full max-w-[355px] h-[451px] rounded-[34px] p-5 border border-[#F6F4FF] bg-white shadow-[14px_41px_100px_0px_rgba(49,89,211,0.12)] box-border">
-      {/* Crop the screenshot to the "102 Jobs / Dylan Hodges" header. */}
+
       <div className="overflow-hidden rounded-[18px] h-[176px] " >
         <LazyImage
           src="/mockup-profile.png"
@@ -172,7 +159,6 @@ function ProfileMockup() {
         />
       </div>
 
-      {/* Coded skill tags, matching the Figma profile mockup. */}
       <div className='absolute bottom-10'>
       <div className="flex flex-wrap gap-3">
         {profileSkills.map((skill) => (

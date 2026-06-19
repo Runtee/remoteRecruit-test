@@ -1,11 +1,8 @@
-// Content for the RemoteRecruit Features page, transcribed verbatim from the
-// Figma frame "RemoteRecruit - Features".
-
 export type Feature = {
   tag: string
   title: string
   body: string
-  /** Which side the illustration sits on at desktop widths. */
+
   imageSide: 'left' | 'right'
   variant: 'jobBoard' | 'membership' | 'profile'
 }
@@ -86,7 +83,6 @@ export const plans: Plan[] = [
   },
 ]
 
-// Membership-tier card shown inside the "Fee-Free Forever" feature mockup.
 export const membershipFeatures = [
   'Up to 25 active job posts',
   'Premium Placement & Visibility',

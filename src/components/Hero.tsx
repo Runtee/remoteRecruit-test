@@ -6,7 +6,7 @@ export default function Hero() {
       id="top"
       className="relative isolate flex min-h-[600px] items-center overflow-hidden sm:min-h-[704px]"
     >
-      {/* Exact hero background exported from Figma (gradient + ellipses + wave). */}
+
       <img
         src="/hero-bg.svg"
         alt=""

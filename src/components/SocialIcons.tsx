@@ -2,8 +2,6 @@ type IconProps = { className?: string }
 
 type Glyph = { viewBox?: string; d: string | string[] }
 
-// Brand glyphs. Single-path icons live on a 24x24 grid; icons exported
-// straight from Figma can carry their own viewBox and multiple paths.
 const glyphs: Record<string, Glyph> = {
   facebook:
     { d: 'M13.5 21v-7h2.3l.4-2.7h-2.7V9.5c0-.8.3-1.3 1.4-1.3h1.4V5.8c-.7-.1-1.4-.1-2.1-.1-2.1 0-3.5 1.3-3.5 3.6v2H8.3V14H11v7h2.5Z' },

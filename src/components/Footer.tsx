@@ -4,7 +4,7 @@ import SocialIcon from './SocialIcons'
 export default function Footer() {
   return (
     <footer className="relative z-0 -mt-28 text-white sm:-mt-40">
-      {/* Exact footer background exported from Figma (gradient + ellipses + top wave). */}
+
       <img
         src="/footer-bg.svg"
         alt=""

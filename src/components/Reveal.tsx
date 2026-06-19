@@ -2,18 +2,13 @@ import { useEffect, useRef, useState, type ReactNode } from 'react'
 
 type RevealProps = {
   children: ReactNode
-  /** Animation variant for the reveal. */
+
   variant?: 'fade-up' | 'fade-in'
-  /** Stagger delay in milliseconds. */
+
   delay?: number
   className?: string
 }
 
-/**
- * Reveals its children with a fade/slide animation the first time they scroll
- * into view, using IntersectionObserver. Respects prefers-reduced-motion by
- * relying on the global motion-reduce overrides in index.css.
- */
 export default function Reveal({
   children,
   variant = 'fade-up',

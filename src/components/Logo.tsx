@@ -1,4 +1,3 @@
-/** RemoteRecruit wordmark (cyan "Remote" / white "Recruit") from the Figma SVG. */
 export default function Logo({ className = '' }: { className?: string }) {
   return (
     <a href="#top" aria-label="RemoteRecruit home" className={`inline-block ${className}`}>

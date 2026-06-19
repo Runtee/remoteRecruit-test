@@ -7,13 +7,12 @@ export default function Pricing() {
     <section id="pricing" className="bg-white pt-16 sm:pt-24">
       <div className="wrap">
         <Reveal>
-          {/* Figma: Poppins 600, 40px / 52px, centered. */}
+
           <h2 className="text-center text-[26px] font-semibold leading-tight text-navy sm:text-h2">
             Help Is One Click Away
           </h2>
         </Reveal>
 
-        {/* z-20 so the cards overlap the footer's blue wave below. */}
         <div className="relative z-20 mt-12 grid gap-8 lg:grid-cols-2 lg:gap-10">
           {plans.map((plan, i) => (
             <Reveal key={plan.name} delay={i * 120}>

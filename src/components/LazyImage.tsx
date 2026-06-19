@@ -5,10 +5,6 @@ type LazyImageProps = ImgHTMLAttributes<HTMLImageElement> & {
   alt: string
 }
 
-/**
- * Thin wrapper around <img> that enables native lazy loading and async
- * decoding so off-screen imagery doesn't block first paint.
- */
 export default function LazyImage({
   src,
   alt,

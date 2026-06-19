@@ -36,7 +36,7 @@ export default function SignUpAd() {
         <Reveal className="relative px-5 sm:px-8 lg:px-0">
           <div className="mx-auto w-full max-w-[480px] overflow-hidden rounded-[40px] bg-white p-3 shadow-card lg:mx-0 lg:ml-[-12%] lg:max-w-[580px]">
             <LazyImage
-              src="/mockup-jobboard.png"
+              src="/mockup-jobboard.webp"
               alt="RemoteRecruit dashboard preview — find work quickly"
               className="w-full rounded-[32px]"
             />

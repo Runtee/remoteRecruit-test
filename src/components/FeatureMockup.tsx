@@ -77,7 +77,7 @@ function JobBoardMockup() {
     <div className="relative mx-auto w-full max-w-[355px] min-h-[451px] rounded-[34px] border border-[#F6F4FF] bg-white p-5 shadow-[14px_41px_100px_0px_rgba(49,89,211,0.12)] box-border">
       <div className="relative h-[176px] overflow-hidden rounded-[18px] shadow-card">
         <LazyImage
-          src="/mockup-jobboard.png"
+          src="/mockup-jobboard.webp"
           alt="RemoteRecruit job board dashboard listing recent remote roles"
           className="absolute h-[170%] max-w-none origin-top-left -left-[46px]"
         />
@@ -153,7 +153,7 @@ function ProfileMockup() {
 
       <div className="overflow-hidden rounded-[18px] h-[176px] " >
         <LazyImage
-          src="/mockup-profile.png"
+          src="/mockup-profile.webp"
           alt="RemoteRecruit candidate profile for Dylan Hodges with completed jobs"
           className="w-full"
         />

@@ -23,9 +23,9 @@ function CheckIcon({ included }: { included: boolean }) {
 
 function PremiumTag({ text }: { text: string }) {
   return (
-    <span className="absolute left-8 top-2.5 inline-flex items-center gap-2 rounded-[22px] bg-pill px-2 py-2 pr-4">
+    <span className="absolute -top-5 left-1/2 inline-flex -translate-x-1/2 items-center gap-2 whitespace-nowrap rounded-[22px] bg-pill px-2 py-2 pr-4">
       <span className="grid h-9 w-9 place-items-center rounded-full bg-white">
-        <img src="/premium-icon.svg" alt="" className="h-5 w-auto" aria-hidden />
+        <img src="/premium-tag.png" alt="" className="h-5 w-auto" aria-hidden loading="lazy" decoding="async" />
       </span>
       <span className="text-sm font-semibold text-royal-deep">{text}</span>
     </span>
@@ -35,39 +35,44 @@ function PremiumTag({ text }: { text: string }) {
 export default function PricingCard({ plan }: { plan: Plan }) {
   return (
     <article
-      className={`relative overflow-hidden rounded-3xl bg-white p-8 shadow-card sm:p-10 ${
-        plan.featured ? 'ring-2 ring-royal-deep/5' : 'border border-royal-deep/5'
+      className={`relative rounded-[28px] bg-white p-6 shadow-card sm:p-8 ${
+        plan.featured ? 'ring-1 ring-royal-deep/5' : 'border border-royal-deep/5'
       }`}
     >
-      {plan.badge ? <PremiumTag text={plan.badge} /> : null}
-
-      <div className={`mb-6 ${plan.badge ? 'mt-12' : ''}`}>
-        <h3 className="text-[34px] font-semibold text-royal-deep">{plan.name}</h3>
-        <p className="mt-1 text-lg font-medium text-navy sm:text-[20px]">
-          {plan.subtitle}
-          {plan.period ? ` • ${plan.period}` : ''}
-        </p>
-      </div>
-
-      <ul className="flex flex-col gap-4">
-        {plan.features.map((f) => (
-          <li
-            key={f.label}
-            className={`flex items-center gap-3 text-sm font-medium sm:text-base ${
-              f.included ? 'text-ink-dark' : 'text-ink-muted'
+      <div className="flex flex-col gap-6 sm:flex-row sm:items-stretch sm:gap-7">
+        <div className="relative flex w-full flex-col items-center justify-center rounded-[18px] bg-[#ECF2FF] px-4 py-10 text-center sm:w-[44%] sm:max-w-[180px]">
+          {plan.badge ? <PremiumTag text={plan.badge} /> : null}
+          <p
+            className={`text-[32px] font-semibold leading-[1.4] ${
+              plan.featured ? 'bg-check-gradient bg-clip-text text-transparent' : 'text-cyan'
             }`}
           >
-            <CheckIcon included={f.included} />
-            {f.label}
-          </li>
-        ))}
-      </ul>
+            {plan.name}
+          </p>
+          <p className="mt-1 text-[20px] font-medium leading-tight text-ink-muted">
+            {plan.subtitle}
+            {plan.period ? <span className="block">{plan.period}</span> : null}
+          </p>
+        </div>
 
-      <div className="mt-7">
-        <Button className="w-full" variant={plan.featured ? 'gradient' : 'outline'}>
-          Get Started
-        </Button>
+        <ul className="flex flex-1 flex-col justify-center gap-4">
+          {plan.features.map((f) => (
+            <li
+              key={f.label}
+              className={`flex items-center gap-3 text-base font-medium ${
+                f.included ? 'text-ink-dark' : 'text-ink-muted'
+              }`}
+            >
+              <CheckIcon included={f.included} />
+              {f.label}
+            </li>
+          ))}
+        </ul>
       </div>
+
+      <Button className="mt-7 w-full text-[20px]" variant={plan.featured ? 'gradient' : 'outline'}>
+        Get Started
+      </Button>
     </article>
   )
 }

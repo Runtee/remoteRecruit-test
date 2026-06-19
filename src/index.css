@@ -21,17 +21,15 @@
 }
 
 @layer components {
-  /* Centered content column. Desktop content is ~1040px inside the 1440 frame. */
+
   .wrap {
     @apply mx-auto w-full max-w-[1200px] px-4 sm:px-8;
   }
 
-  /* Pale-cyan category tag (e.g. "Global Reach", "Actually Fee Free"). */
   .tag-pill {
     @apply inline-flex items-center rounded-[18px] bg-pill px-5 py-2 text-xs font-semibold text-navy;
   }
 
-  /* Section heading — 40px / 500 in Figma, scaled down on small screens. */
   .h2 {
     @apply text-[30px] font-medium leading-tight text-navy sm:text-h2;
   }
@@ -44,7 +42,6 @@
   }
 
 }
-
 
 @media (prefers-reduced-motion: reduce) {
   html {

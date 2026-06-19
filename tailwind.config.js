@@ -1,34 +1,31 @@
-/** @type {import('tailwindcss').Config} */
 export default {
   content: ['./index.html', './src/**/*.{ts,tsx}'],
   theme: {
     extend: {
       colors: {
-        // Exact palette sampled from the "RemoteRecruit - Features" Figma frame.
-        navy: '#11142D', // primary headings
+        navy: '#11142D',
         cyan: {
-          DEFAULT: '#52B4DA', // logo "Remote" + accents
+          DEFAULT: '#52B4DA',
           deep: '#50C0E3',
         },
         royal: {
-          deep: '#1E3E85', // deep brand blue
-          mid: '#336DA6', // mid brand blue
+          deep: '#1E3E85',
+          mid: '#336DA6',
         },
-        mint: '#19CDB8', // "included" checks
-        pill: '#C2EEFF', // pale-cyan category tag
+        mint: '#19CDB8',
+        pill: '#C2EEFF',
         danger: '#FF1F1F',
         ink: {
-          dark: '#323445', // dark body (pricing/membership lines)
-          body: '#6D6E7A', // FAQ answers
-          soft: '#767784', // sign-up subtitle
-          muted: '#808191', // muted labels
+          dark: '#323445',
+          body: '#6D6E7A',
+          soft: '#767784',
+          muted: '#808191',
         },
       },
       fontFamily: {
         sans: ['Poppins', 'ui-sans-serif', 'system-ui', 'sans-serif'],
       },
       fontSize: {
-        // [size, line-height] pairs matching the Figma type scale.
         display: ['53px', '68px'],
         h2: ['40px', '52px'],
         h2lg: ['44px', '57px'],

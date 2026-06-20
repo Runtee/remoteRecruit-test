@@ -126,10 +126,10 @@ function MembershipMockup() {
         <div className="leading-tight">
           <p className="text-xs font-semibold text-royal-deep">Upcoming Payment In…</p>
           <p className="text-[15px] font-medium text-navy sm:text-[17px]">14 Days - $79.99</p>
-        </div>
+        </div>``
       </div>
 
-      <Badge className="absolute -right-3 top-6 h-16 w-16 sm:-right-6 sm:h-20 sm:w-20" />
+      <Badge className="absolute -right-3 top-10 h-16 w-16 sm:-right-6 sm:h-20 sm:w-20" />
     </div>
   )
 }
